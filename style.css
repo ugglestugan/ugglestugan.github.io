@@ -1,0 +1,24 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0; /* Light grey background */
+}
+
+#header-logo {
+    max-width: 100px; /* Adjust based on your logo size */
+    height: auto;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
