@@ -29,6 +29,8 @@ header {
 }
 
 .logo {
+    display: block; /* Makes the image block-level for margin auto to work */
+    margin: 0 auto; /* Centers the image */
     height: 360px;
 }
 
