@@ -7,16 +7,15 @@ body, h1, h2, p {
 
 /* Color palette */
 :root {
-    --color-cream: #f9f5f0;
-    --color-light-green: #DAD7CD;
+    --color-cream: #fef8ea;
     --color-green: #A3B18A;
     --color-brown: #BAA898;
-    --color-dark-brown: #60495A;
+    --color-dark-brown: #0b2732;
 }
 
 /* Add this to your existing CSS */
 header {
-    background-color: var(--color-light-green);
+    background-color: var(--color-cream);
     padding: 10px 0;
     text-align: center;
 }
@@ -30,15 +29,14 @@ header {
 }
 
 .logo {
-    height: 300px;
-    
+    height: 360px;
 }
 
 /* Continue with the rest of your CSS styles */
 
 body {
     font-family: 'Cormorant Garamond', serif;
-    background-color: var(--color-light-green);
+    background-color: var(--color-cream);
     color: var(--color-dark-brown);
     line-height: 1.6;
     padding: 20px;
@@ -73,7 +71,7 @@ main {
 
 #subsections article {
     flex-basis: 30%;
-    background-color: var(--color-light-green); /* Subtle background color for articles */
+    background-color: var(--color-cream); /* Subtle background color for articles */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
