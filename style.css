@@ -1,24 +1,107 @@
-body, html {
+/* Base styles */
+body, h1, h2, p {
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
+/* Color palette */
+:root {
+    --color-cream: #fef8ea;
+    --color-green: #A3B18A;
+    --color-brown: #BAA898;
+    --color-dark-brown: #0b2732;
+}
+
+/* Add this to your existing CSS */
 header {
+    background-color: var(--color-cream);
+    padding: 10px 0;
     text-align: center;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey background */
 }
 
-#header-logo {
-    max-width: 100px; /* Adjust based on your logo size */
-    height: auto;
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block; /* Makes the image block-level for margin auto to work */
+    margin: 0 auto; /* Centers the image */
+    height: 360px;
+}
+
+/* Continue with the rest of your CSS styles */
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    background-color: var(--color-cream);
+    color: var(--color-dark-brown);
+    line-height: 1.6;
+    padding: 20px;
 }
 
 main {
-    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-section {
-    margin-bottom: 20px;
+/* Main content styles */
+#main-content {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-dark-brown); /* Updated text color */
+}
+
+#main-content h1 {
+    font-size: 3em;
+}
+
+#main-content p {
+    font-size: 1.25em;
+}
+
+/* Subsections styles */
+#subsections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+#subsections article {
+    flex-basis: 30%;
+    background-color: var(--color-cream); /* Subtle background color for articles */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#subsections h2 {
+    margin-bottom: 15px;
+    color: var(--color-brown); /* Heading color is chosen to match the provided design */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #subsections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #subsections article {
+        margin-bottom: 20px;
+        flex-basis: auto;
+        width: 80%; /* Full width on mobile devices */
+    }
+
+    #main-content h1 {
+        font-size: 2em;
+    }
+
+    #main-content p {
+        font-size: 1em;
+    }
 }
