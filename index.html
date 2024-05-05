@@ -1,34 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
-  
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugglestugan</title>
     <style>
-      .quicksand-<uniquifier> {
-        font-family: "Quicksand", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-      }
-      
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevents horizontal scroll */
+        }
+
         /* Base styles */
         body, h1, h2, p {
-          font-family: "Quicksand", sans-serif;
-          font-weight: 500;
+            font-family: "Quicksand", sans-serif;
+            font-weight: 500;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         /* Color palette */
         :root {
             --color-cream: #fef8ea;
@@ -66,28 +65,29 @@
             background-color: var(--color-cream);
             color: var(--color-dark-brown);
             line-height: 1.6;
-            padding-top: 50px; /* To ensure content is not hidden behind the fixed navbar */
+            padding-top: 50px;
         }
 
         main {
-            max-width: 1200px;
+            width: 100%; /* Adjusts width to ensure full coverage */
             margin: 0 auto;
+            overflow: hidden; /* Prevents any horizontal overflow */
         }
 
-      .logo {
-            display: block; /* Makes the image block-level for margin auto to work */
-            margin: 0 auto; /* Centers the image */
-            height: 180px; /* Adjusted height */
+        .logo {
+            display: block;
+            margin: 0 auto;
+            height: 180px;
         }
       
         .parallax {
-            /* The image used */
             background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/nisse_jam_2.jpg');
             min-height: 700px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            width: 100%;
         }
 
         #main-content {
@@ -142,8 +142,7 @@
             }
 
             #main-content h1 {
-              //font-family: "Quicksand", sans-serif;
-              font-family: "Jaro", sans-serif;
+                font-family: "Jaro", sans-serif;
                 font-size: 4em;
                 font-weight: 100;
             }
@@ -153,7 +152,6 @@
             }
         }
     </style>
-  
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
