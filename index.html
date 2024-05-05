@@ -20,24 +20,28 @@
             --color-dark-brown: #0b2732;
         }
 
-        header {
+        /* Navbar styles */
+        .navbar {
             background-color: var(--color-cream);
             padding: 10px 0;
             text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--color-dark-brown);
         }
 
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .navbar a {
+            color: var(--color-dark-brown);
+            text-decoration: none;
+            margin: 0 20px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2em;
         }
 
-        .logo {
-            display: block; /* Makes the image block-level for margin auto to work */
-            margin: 0 auto; /* Centers the image */
-            height: 180px; /* Adjusted height */
+        .navbar a:hover {
+            color: var(--color-green);
         }
 
         body {
@@ -45,7 +49,7 @@
             background-color: var(--color-cream);
             color: var(--color-dark-brown);
             line-height: 1.6;
-            padding: 20px;
+            padding-top: 50px; /* To ensure content is not hidden behind the fixed navbar */
         }
 
         main {
@@ -53,14 +57,16 @@
             margin: 0 auto;
         }
 
+      .logo {
+            display: block; /* Makes the image block-level for margin auto to work */
+            margin: 0 auto; /* Centers the image */
+            height: 180px; /* Adjusted height */
+        }
+      
         .parallax {
             /* The image used */
-            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/background_00.jpg'); /* Add your image URL here */
-
-            /* Set a specific height */
-            min-height: 700px; 
-
-            /* Create the parallax scrolling effect */
+            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/nisse_jam_2.jpg');
+            min-height: 700px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
@@ -129,12 +135,16 @@
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
+    <nav class="navbar">
+        <a href="#main-content">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#opening-times">Opening Times</a>
+        <a href="#subsections">Services</a>
+    </nav>
     <main>
         <div class="parallax">
-          <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/ugglestugan_logo_white_tsp.png" alt="Ugglestugan Logo" class="logo">
-            
-          </div>
-     
+            <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/ugglestugan_logo_white_tsp.png" alt="Ugglestugan Logo" class="logo">
+        </div>
         <section id="main-content">
             <h1>Ugglestugan</h1>
             <p>Welcome. Local produce, arts, and crafts.</p>
@@ -152,6 +162,14 @@
                 <h2>Our Customers Say</h2>
                 <p>"Nisse Nook takes you on a fairy tale journey with their charming shop and exceptional products!"</p>
             </article>
+        </section>
+        <section id="about-us">
+            <h1>About Us</h1>
+            <p>Insert about us text here.</p>
+        </section>
+        <section id="opening-times">
+            <h1>Opening Times</h1>
+            <p>We are open on the weekends for most of the day.</p>
         </section>
     </main>
 </body>
