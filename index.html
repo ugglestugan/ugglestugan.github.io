@@ -75,20 +75,25 @@
         }
 
         .logo {
-            display: block;
+            display: block; /* Keeps the logo block level */
+            position: absolute; /* Positions the logo absolutely within the parallax container */
+            left: 50%; /* Centers the logo horizontally */
+            top: 50%; /* Centers the logo vertically */
+            transform: translate(-50%, -300px); /* Adjusts horizontal centering and moves down by 30px */
+            height: 180px; /* Adjusted height */
             margin: 0 auto;
-            height: 180px;
-        }
+             }
       
         .parallax {
-            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/nisse_jam_2.jpg');
+            position: relative; /* Ensures that positioning of children is relative to this container */
+            /* Existing styles */
+            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/nisse_jam_3.jpg');
             min-height: 700px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            width: 100%;
-        }
+}
 
         #main-content {
             text-align: center;
