@@ -4,25 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugglestugan</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Replace with the direct link to your favicon image -->
+    <style>
+        /* Base styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Color palette */
+        :root {
+            --color-cream: #fef8ea;
+            --color-green: #A3B18A;
+            --color-brown: #BAA898;
+            --color-dark-brown: #0b2732;
+        }
+
+        header {
+            background-color: var(--color-cream);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto;
+            height: 360px;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark-brown);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #main-content {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--color-dark-brown);
+        }
+
+        #main-content h1 {
+            font-size: 3em;
+        }
+
+        #main-content p {
+            font-size: 1.25em;
+        }
+
+        #subsections {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 40px;
+        }
+
+        #subsections article {
+            flex-basis: 30%;
+            background-color: var(--color-cream);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #subsections h2 {
+            margin-bottom: 15px;
+            color: var(--color-brown);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            #subsections {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            #subsections article {
+                margin-bottom: 20px;
+                flex-basis: auto;
+                width: 80%;
+            }
+
+            #main-content h1 {
+                font-size: 2em;
+            }
+
+            #main-content p {
+                font-size: 1em;
+            }
+        }
+    </style>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <!-- Replace with the direct link to your logo image -->
             <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/ugglestugan.jpg" alt="Nisse Nook Logo" class="logo">
-            <!-- The h1 can be included inside the header-content if needed -->
         </div>
     </header>
     <main>
         <section id="main-content">
-            <!-- The image can be included here if the logo should be part of the main content -->
             <h1>Ugglestugan</h1>
             <p>Welcome. local produce, arts, and crafts.</p>
         </section>
-
         <section id="subsections">
             <article id="handcrafted-goods">
                 <h2>Handcrafted Goods</h2>
