@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
@@ -37,7 +35,6 @@
 
         /* Navbar styles */
         .navbar {
-            font-family: "Quicksand", sans-serif;
             background-color: var(--color-cream);
             padding: 10px 0;
             text-align: center;
@@ -60,7 +57,6 @@
         }
 
         body {
-            font-family: "Quicksand", sans-serif;
             background-color: var(--color-cream);
             color: var(--color-dark-brown);
             line-height: 1.6;
@@ -80,30 +76,41 @@
             top: 50%; /* Centers the logo vertically */
             transform: translate(-50%, -210px); /* Adjusts horizontal centering and moves down by 30px */
             height: 180px; /* Adjusted height */
-            margin: 0 auto;
-             }
+        }
       
         .parallax {
-            position: relative; /* Ensures that positioning of children is relative to this container */
-            /* Existing styles */
+            position: relative;
             background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/tomte_owl.jpg');
             min-height: 700px;
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-          }
-      .paralax-title{
-        color: white;
-        font-size: 50px;
-        font-family: "Jaro", sans-serif;
-        display: block; /* Keeps the logo block level */
-        position: absolute; /* Positions the logo absolutely within the parallax container */
-        left: 50%; /* Centers the logo horizontally */
-        top: 50%; /* Centers the logo vertically */
-        transform: translate(-50%, -350px); /* Adjusts horizontal centering and moves down by 30px */
-      }
-      
+        }
+
+        .paralax-title {
+            color: white;
+            font-size: 5vw; /* Responsive font size */
+            font-family: "Jaro", sans-serif;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -350px);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .paralax-title {
+                font-size: 36px; /* Maximum font size for larger screens */
+            }
+        }
+
+        @media (max-width: 767px) {
+            .paralax-title {
+                font-size: 8vw; /* Larger font size for smaller screens */
+            }
+        }
+
         #main-content {
             text-align: center;
             margin-bottom: 40px;
@@ -111,7 +118,6 @@
         }
 
         #main-content h1 {
-            font-family: "Quicksand", sans-serif;
             font-size: 3em;
         }
 
@@ -138,7 +144,6 @@
             color: var(--color-brown);
         }
 
-        /* Responsive styles */
         @media (max-width: 768px) {
             .parallax {
                 background-attachment: scroll;
@@ -177,13 +182,12 @@
     </nav>
     <main>
         <div class="parallax">
-            <div class= "paralax-title">
-            <h1>Ugglestugan</h1>
+            <div class="paralax-title">
+                <h1>Ugglestugan</h1>
             </div>
             <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/ugglestugan_logo_white_tsp.png" alt="Ugglestugan Logo" class="logo">
         </div>
         <section id="main-content">
-           
             <p>Local produce and crafts, with a touch of magic.</p>
         </section>
         <section id="subsections">
