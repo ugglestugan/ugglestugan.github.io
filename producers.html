@@ -4,19 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Producers</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Ensure correct path to your CSS file -->
+    <style>
+        /* Base styles */
+        body, p {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Color palette */
+        :root {
+            --color-cream: #fef8ea;
+            --color-green: #A3B18A;
+            --color-brown: #BAA898;
+            --color-dark-brown: #0b2732;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--color-cream);
+            color: var(--color-dark-brown);
+            line-height: 1.6;
+            padding-top: 50px;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--color-dark-brown);
+            color: white;
+        }
+
+        main {
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .producer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .producer-card {
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .producer-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .producer-info {
+            padding: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .producer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <!-- Your navigation bar and other header content -->
+        <h1>Our Local Producers</h1>
     </header>
     <main>
-        <h1>Our Producers</h1>
-        <p>Here is a list of all of our local producers who supply the goods in our shop.</p>
+        <h2>Meet the Makers Behind Our Products</h2>
+        <p>Explore the talented individuals who craft each product with care and expertise.</p>
+        <div class="producer-grid">
+            <div class="producer-card">
+                <img src="https://example.com/path_to_image1.jpg" alt="Producer Name">
+                <div class="producer-info">
+                    <h3>John Doe</h3>
+                    <p>John specializes in organic vegetables and homemade sauces.</p>
+                </div>
+            </div>
+            <div class="producer-card">
+                <img src="https://example.com/path_to_image2.jpg" alt="Producer Name">
+                <div class="producer-info">
+                    <h3>Jane Smith</h3>
+                    <p>Jane is known for her handwoven baskets and artisan breads.</p>
+                </div>
+            </div>
+            <!-- Additional cards can be added here following the same structure -->
+        </div>
     </main>
     <footer>
-        <!-- Your footer content -->
+        <p>© 2023 Ugglestugan. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
