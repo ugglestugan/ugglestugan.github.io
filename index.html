@@ -3,92 +3,116 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugglestugan</title>
-    <style>
-        /* Base styles */
-        body, p {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+  /* Base styles */
+body, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Color palette */
-        :root {
-            --color-cream: #fef8ea;
-            --color-green: #A3B18A;
-            --color-brown: #BAA898;
-            --color-dark-brown: #0b2732;
-        }
+/* Color palette */
+:root {
+    --color-cream: #fef8ea;
+    --color-green: #A3B18A;
+    --color-brown: #BAA898;
+    --color-dark-brown: #0b2732;
+}
 
-        body {
-            background-color: var(--color-cream);
-            color: var(--color-dark-brown);
-            line-height: 1.6;
-        }
+body {
+    background-color: var(--color-cream);
+    color: var(--color-dark-brown);
+    line-height: 1.6;
+}
 
-      main {
-        width: 100%; /* Adjusts width to ensure full coverage */
-        margin: 0 auto;
-        overflow: hidden; /* Prevents any horizontal overflow */
-        position: relative; /* Relative positioning for internal absolute positioning */
+main {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax {
+    position: relative;
+    background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/tomte_owl.jpg');
+    min-height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.paralax-content {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+
+.paralax-title h1 {
+    color: white;
+    font-family: "Jaro", sans-serif;
+    font-weight: 700;
+    font-size: clamp(50px, 5vw, 100px);
+    letter-spacing: 5px;
+}
+
+.paralax-subtitle p {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(10px, 1vw, 30px);
+    transform: translate(0, -220%);
+}
+
+#subsections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+#subsections article {
+    font-family: "Quicksand", sans-serif;
+    flex-basis: 30%;
+    background-color: var(--color-cream);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#subsections h2 {
+    font-family: "Jaro", sans-serif;
+    margin-bottom: 15px;
+    color: var(--color-brown);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
     }
 
-      
-      .parallax {
-        position: relative;
-        background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/tomte_owl.jpg');
-        min-height: 700px;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        top: -50px; /* Adjust this value if there is still a gap */
-        }
-      .paralax-content {
-            position: absolute;
-            left: 50%;
-            top: 2%;
-            transform: translate(-50%, 0);
-            text-align: center;
-        }
-        .paralax-title h1{
-            color: white;
-            font-family: "Jaro";
-            font-size: 6vw;
-            weight: 100px;
-        }
-      
-        .paralax-subtitle p{
-            color: white;
-            font-family: "Quicksand", sans-serif;
-            transform: translate(0, -170%);
-        }
+    #subsections {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        #subsections {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 40px;
-        }
+    #subsections article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 
-        #subsections article {
-            font-family: "Quicksand", sans-serif;
-            flex-basis: 30%;
-            background-color: var(--color-cream);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+    #main-content p {
+        font-size: 1em;
+    }
+}
+  </style>
 
-        #subsections h2 {
-            font-family: "Jaro", sans-serif;
-            margin-bottom: 15px;
-            color: var(--color-brown);
-        }
-    </style>
     <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
