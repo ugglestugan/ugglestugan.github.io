@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
@@ -17,10 +17,10 @@
 
         /* Color palette */
         :root {
-        --color-cream: #fef8ea;
-        --color-green: #A3B18A;
-        --color-brown: #BAA898;
-        --color-dark-brown: #0b2732;
+            --color-cream: #fef8ea;
+            --color-green: #A3B18A;
+            --color-brown: #BAA898;
+            --color-dark-brown: #0b2732;
         }
 
         body {
@@ -32,19 +32,21 @@
 
         header {
             padding: 20px;
-            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/producers_splash.jpg'); /* Replace with your actual image path */
-            background-size: cover; /* Cover ensures the image covers the header area completely */
-            background-position: center; /* Centers the background image */
+            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/producers_splash.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
             font-size: 3vw;
         }
 
         main {
+          
+          border-radius: 8px;
           text-align: center;
-            width: 100%;
-            margin: 0 auto;
-            overflow: hidden;
-            padding: 20px;
+          width: 100%;
+          margin: 0 auto;
+          overflow: hidden;
+          position: relative;
         }
       .title-text h1{
             font-family: 'Jaro', sans-serif;
@@ -55,6 +57,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            padding: 0 20px; /* Ensure padding does not cause horizontal scrolling */
         }
 
         .producer-card {
@@ -73,31 +76,37 @@
             padding: 15px;
         }
 
-        @media (max-width: 768px) {
-            .producer-grid {
-                grid-template-columns: 1fr;
-            }
+            @media (max-width: 768px) {
+        .producer-grid {
+            grid-template-columns: 1fr; /* One column on smaller screens */
+            justify-items: center; /* Centers items in the grid */
         }
+
+        .producer-card {
+            width: 80%; /* More appropriate width on small screens */
+            margin: 0 auto; /* Ensures cards are centered */
+        }
+    }
     </style>
+</head>
 <body>
     <header>
-      <div class="title-text">
-        <h1>Our Local Producers</h1>
-      </div>
+        <div class="title-text">
+            <h1>Our Local Producers</h1>
+        </div>
     </header>
     <main>
-        <p>Explore the talented individuals who craft each product with care and expertise. <br>All of our producers live within 10km of our shop.</p>
-      <br>
+        <p>Explore the talented individuals who craft each product with care and expertise. All of our producers live within 10km of our shop.</p>
         <div class="producer-grid">
             <div class="producer-card">
-                <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/default_profile.jpg" alt="Producer Name">
+                <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/default_profile.jpg" alt="Jane Doe">
                 <div class="producer-info">
                     <h3>Jane Doe</h3>
                     <p>Jane specializes in organic vegetables and homemade sauces.</p>
                 </div>
             </div>
             <div class="producer-card">
-                <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/profile_male.jpg" alt="Producer Name">
+                <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/profile_male.jpg" alt="John Smith">
                 <div class="producer-info">
                     <h3>John Smith</h3>
                     <p>John is known for his local honey and artisan breads.</p>
@@ -106,5 +115,8 @@
             <!-- Additional cards can be added here following the same structure -->
         </div>
     </main>
+    <footer>
+        <p>&copy; 2024 Ugglestugan. All rights reserved.</p>
+    </footer>
 </body>
 </html>
