@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Producers</title>
@@ -14,10 +17,10 @@
 
         /* Color palette */
         :root {
-            --color-cream: #fef8ea;
-            --color-green: #A3B18A;
-            --color-brown: #BAA898;
-            --color-dark-brown: #0b2732;
+        --color-cream: #fef8ea;
+        --color-green: #A3B18A;
+        --color-brown: #BAA898;
+        --color-dark-brown: #0b2732;
         }
 
         body {
@@ -25,23 +28,29 @@
             background-color: var(--color-cream);
             color: var(--color-dark-brown);
             line-height: 1.6;
-            padding-top: 50px;
         }
 
-        header, footer {
-            text-align: center;
+        header {
             padding: 20px;
-            background-color: var(--color-dark-brown);
+            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/producers_splash.jpg'); /* Replace with your actual image path */
+            background-size: cover; /* Cover ensures the image covers the header area completely */
+            background-position: center; /* Centers the background image */
             color: white;
+            font-size: 3vw;
         }
 
         main {
+          text-align: center;
             width: 100%;
             margin: 0 auto;
             overflow: hidden;
             padding: 20px;
         }
-
+      .title-text h1{
+            font-family: 'Jaro', sans-serif;
+            text-align: center;
+            transform: translate(0, -60%);
+      }
         .producer-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -70,15 +79,15 @@
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Jaro:wght@400;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-</head>
 <body>
     <header>
+      <div class="title-text">
         <h1>Our Local Producers</h1>
+      </div>
     </header>
     <main>
-        <h2>Meet the Makers Behind Our Products</h2>
-        <p>Explore the talented individuals who craft each product with care and expertise.</p>
+        <p>Explore the talented individuals who craft each product with care and expertise. <br>All of our producers live within 10km of our shop.</p>
+      <br>
         <div class="producer-grid">
             <div class="producer-card">
                 <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/default_profile.jpg" alt="Producer Name">
@@ -97,8 +106,5 @@
             <!-- Additional cards can be added here following the same structure -->
         </div>
     </main>
-    <footer>
-        <p>© 2023 Ugglestugan. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
