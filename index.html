@@ -9,17 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ugglestugan</title>
     <style>
-        html, body {
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden; /* Prevents horizontal scroll */
-        }
-
         /* Base styles */
-        body, h1, h2, p {
-            font-weight: 500;
+        body, p {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -33,51 +24,29 @@
             --color-dark-brown: #0b2732;
         }
 
-        /* Navbar styles */
-        .navbar {
-            background-color: var(--color-cream);
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 2px solid var(--color-dark-brown);
-        }
-
-        .navbar a {
-            color: var(--color-dark-brown);
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.2em;
-        }
-
-        .navbar a:hover {
-            color: var(--color-green);
-        }
-
         body {
             background-color: var(--color-cream);
             color: var(--color-dark-brown);
             line-height: 1.6;
-            padding-top: 50px;
         }
 
-        main {
-            width: 100%; /* Adjusts width to ensure full coverage */
-            margin: 0 auto;
-            overflow: hidden; /* Prevents any horizontal overflow */
-        }
+      main {
+        width: 100%; /* Adjusts width to ensure full coverage */
+        margin: 0 auto;
+        overflow: hidden; /* Prevents any horizontal overflow */
+        position: relative; /* Relative positioning for internal absolute positioning */
+    }
 
       
-        .parallax {
-            position: relative;
-            background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/tomte_owl.jpg');
-            min-height: 700px;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+      .parallax {
+        position: relative;
+        background-image: url('https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/tomte_owl.jpg');
+        min-height: 700px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: -50px; /* Adjust this value if there is still a gap */
         }
       .paralax-content {
             position: absolute;
@@ -86,43 +55,17 @@
             transform: translate(-50%, 0);
             text-align: center;
         }
-        .paralax-title {
+        .paralax-title h1{
             color: white;
-            font-size: 5vw; /* Responsive font size */
-            font-family: "Jaro", sans-serif;
+            font-family: "Jaro";
+            font-size: 6vw;
+            weight: 100px;
         }
       
-              .paralax-subtitle {
+        .paralax-subtitle p{
             color: white;
-            font-size: 1.8vw; /* Responsive font size */
             font-family: "Quicksand", sans-serif;
-            transform: translate(0, -70%);
-        }
-
-        @media (min-width: 768px) {
-            .paralax-title {
-                font-size: 36px; /* Maximum font size for larger screens */
-            }
-        }
-              @media (min-width: 768px) {
-            .paralax-subtitle {
-                font-size: 12px; /* Maximum font size for larger screens */
-            }
-        }
-
-
-        #main-content {
-            text-align: center;
-            margin-bottom: 40px;
-            color: var(--color-dark-brown);
-        }
-
-        #main-content h1 {
-            font-size: 3em;
-        }
-
-        #main-content p {
-            font-size: 1.25em;
+            transform: translate(0, -170%);
         }
 
         #subsections {
@@ -132,6 +75,7 @@
         }
 
         #subsections article {
+            font-family: "Quicksand", sans-serif;
             flex-basis: 30%;
             background-color: var(--color-cream);
             padding: 20px;
@@ -140,34 +84,9 @@
         }
 
         #subsections h2 {
+            font-family: "Jaro", sans-serif;
             margin-bottom: 15px;
             color: var(--color-brown);
-        }
-
-        @media (max-width: 768px) {
-            .parallax {
-                background-attachment: scroll;
-            }
-
-            #subsections {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            #subsections article {
-                margin-bottom: 20px;
-                flex-basis: auto;
-                width: 80%;
-            }
-
-            #main-content h1 {
-                font-size: 4em;
-                font-weight: 100;
-            }
-
-            #main-content p {
-                font-size: 1em;
-            }
         }
     </style>
     <link rel="icon" type="image/png" href="favicon.png">
@@ -184,9 +103,6 @@
                 </div>
             </div>   
         </div>
-        <section id="main-content">
-
-        </section>
         <section id="subsections">
             <article id="handcrafted-goods">
                 <h2>Handcrafted Goods</h2>
@@ -197,8 +113,8 @@
                 <p>Experience the taste of Sweden with our selection of fresh, locally-sourced fruits and vegetables.</p>
             </article>
             <article id="customer-testimonials">
-                <h2>Our Customers Say</h2>
-                <p>"Nisse Nook takes you on a fairy tale journey with their charming shop and exceptional products!"</p>
+                <h2>About us</h2>
+                <p>We are a collection of local producers who are passionate about hand crafted products </p>
             </article>
         </section>
         <section id="about-us">
@@ -207,9 +123,8 @@
         </section>
         <section id="opening-times">
             <h1>Opening Times</h1>
-            <p>We are open on the weekends for most of the day.</p>
+            <p>Come visit us on the weekends. Keep an eye on our social channels for extra opening times and more.</p>
         </section>
     </main>
 </body>
 </html>
-
