@@ -40,15 +40,13 @@
         }
 
         main {
-          
-          border-radius: 8px;
-          text-align: center;
-          width: 100%;
-          margin: 0 auto;
-          overflow: hidden;
-          position: relative;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
         }
-      .title-text h1{
+ .title-text h1{
             font-family: 'Jaro', sans-serif;
             text-align: center;
             transform: translate(0, -60%);
@@ -56,9 +54,9 @@
       }
         .producer-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            padding: 0 20px; /* Ensure padding does not cause horizontal scrolling */
+            padding: 0 20px;
         }
 
         .producer-card {
@@ -77,17 +75,35 @@
             padding: 15px;
         }
 
-            @media (max-width: 768px) {
-        .producer-grid {
-            grid-template-columns: 1fr; /* One column on smaller screens */
-            justify-items: center; /* Centers items in the grid */
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: var(--color-green);
+            color: white;
+            text-decoration: none;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1em;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            z-index: 1000;
         }
 
-        .producer-card {
-            width: 80%; /* More appropriate width on small screens */
-            margin: 0 auto; /* Ensures cards are centered */
+        .floating-button:hover {
+            background-color: var(--color-brown);
         }
-    }
+
+        @media (max-width: 768px) {
+            .producer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .producer-card {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -113,8 +129,15 @@
                     <p>John is known for his local honey and artisan breads.</p>
                 </div>
             </div>
-            <!-- Additional cards can be added here following the same structure -->
+            <div class="producer-card">
+                <img src="https://raw.githubusercontent.com/ugglestugan/ugglestugan.github.io/main/images/shoom_lady.jpg" alt="Brenda Brown">
+                <div class="producer-info">
+                    <h3>Brenda Brown</h3>
+                    <p>She can fulfill all of your mushroomy needs.</p>
+                </div>
+            </div>
         </div>
     </main>
+    <a href="https://ugglestugan.github.io/index.html" class="floating-button">Home</a>
 </body>
 </html>
